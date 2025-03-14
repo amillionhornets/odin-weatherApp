@@ -173,7 +173,7 @@ async function callWeatherAPI(){
         }
         const json = await response.json();
         createWeatherCard(json)
-        if (count >= 12){
+        if (count >= 6){
             let main = document.querySelector("main")
             let elements = main.getElementsByTagName("div")
             main.removeChild(elements[0]);
