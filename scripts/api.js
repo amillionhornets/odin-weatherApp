@@ -162,6 +162,7 @@ function createWeatherCard(json) {
     
     return card;
 }
+let count = 0
 async function callWeatherAPI(){
     let city = document.getElementById("city").value
     const zipCurrWeather = `http://api.weatherapi.com/v1/current.json?key=ed86dd702e284994b23185750250903&q=${city}`
@@ -172,6 +173,12 @@ async function callWeatherAPI(){
         }
         const json = await response.json();
         createWeatherCard(json)
+        if (count >= 12){
+            let main = document.querySelector("main")
+            let elements = main.getElementsByTagName("div")
+            main.removeChild(elements[0]);
+        }
+        count++;
     }
     catch (error){
         console.error(error.message);
