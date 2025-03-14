@@ -165,7 +165,7 @@ function createWeatherCard(json) {
 let count = 0
 async function callWeatherAPI(){
     let city = document.getElementById("city").value
-    const zipCurrWeather = `http://api.weatherapi.com/v1/current.json?key=ed86dd702e284994b23185750250903&q=${city}`
+    const zipCurrWeather = `https://api.weatherapi.com/v1/current.json?key=ed86dd702e284994b23185750250903&q=${city}`
     try{
         const response = await fetch(zipCurrWeather);
         if(!response.ok){
