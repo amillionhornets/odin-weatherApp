@@ -9,8 +9,10 @@
 <body class="bg-pbPink">
     <header>
         <h1 class="font-bold text-center text-3xl text-white mt-5">City Weather Checker :D</h1>
-        <input id="city" type="text">
-        <button onclick="callWeatherAPI()">search!</button>
+        <div class="text-center mt-5">
+            <input id="city" class="bg-white" type="text">
+            <button class="border-2 bg-white text-gray-800" onclick="callWeatherAPI()">search!</button>
+        </div>
     </header>
     <!-- Since I can't edit the create weather card I am going to have styles inherit from main -->
     <main class="flex-wrap flex">
@@ -21,4 +23,4 @@
     </footer>
     <script src="../scripts/api.js"></script>
 </body>
-</html>
+</html> 
